@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ name }}</title>
+	<meta charset ="utf-8" http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+	<link rel="stylesheet" type="text/css" href="/static/css/onestore.css">
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script async defer src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAxgAb1hkG9KgsYenH9OJzFisq-hZBSrZA&callback=initMap" type = "text/javascript"></script>
+
+</head>
+<body>
+    <img src="/static/img/onestorecover.jpg" id="" style="width:100%;height:100px">
+    <div id="div1">
+    <div id="pic1"><A HREF="/static/img/saree.jpg"><img src="/static/img/saree.jpg" id="pic1" style="width:100%;height:100%"></A></div>
+    <div id="pic2"><A HREF="/static/img/dress.jpeg"><img src="/static/img/dress.jpeg" id="" style="width:100%;height:100%"></A></div>
+    <div id="pic4"><A HREF="/static/img/salwar.jpeg"><img src="/static/img/salwar.jpeg" id="" style="width:100%;height:100%"></A></div>
+    <div id="pic3"><A HREF="/static/img/kid.jpg"><img src="/static/img/kid.jpg" id="" style="width:100%;height:100%"></A></div>
+    <div id="pic5"><A HREF="/static/img/men.jpg"><img src="/static/img/men.jpg" id="" style="width:100%;height:100%"></A></div>
+    <div id="pic6"><A HREF="/static/img/kurti.jpg"><img src="/static/img/kurti.jpg" id="" style="width:100%;height:100%"></A></div>
+    <div id="pic7"><A HREF="/static/img/top.jpg"><img src="/static/img/top.jpg" id="" style="width:100%;height:100%"></A></div>
+    <div id="location">{{location}}</div>
+	</div>
+	<div id="desc">
+	<h1><u>Store name: {{ name }}</u></h1>
+	<p><b>Store Details</b></p>
+	<p>{{description}}</p>
+	</div>
+	<div id="map"><img src="http://maps.googleapis.com/maps/api/staticmap?center={{ location }}&size=650x250&sensor=true&markers=color:red|{{ location }}&zoom=15"
+	</div>
+	 <script type="text/javascript">
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" id="sellerworx_login" class="no_js">
+<head>
+	<title>Stores and their details</title>
+	<meta charset ="utf-8" http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/allstorestable.css">
+</head>
+<body>
+	<h1>Stores across Delhi<button id="newstore"  onclick="window.location.href='newstore'" type="submit">New Store</button></h1>
+
+	<div>
+ 	   <img src="/static/img/store_inside.jpg" id="" style="width:100%;">
+    </div>
+<form id="myform"  method="GET">
+<table id="myTable">
+	    <tr>
+	        <th>Store Name</th>
+	        <th>Store Location</th>
+	    </tr>
+	    {% for item in stores %}
+	    <tr> 
+	        <td>{{ item.store_name }}</td>
+	        <td>{{ item.store_location }}</td>
+	    </tr>
+	    {% endfor %}
+	</table>
+</form><br>
+<label for="store">Select a store to know more about it!</label>
+<form name="form763" id="form763" action="/store" method="GET">
+<!-- {% csrf_token %} -->
+    <select  name="store" id="store" size="1" required>
+        <option value="" >Select Store</option>
+            {% for item in stores %}
+	            <option value = {{ item.id }}>{{ item.store_name }} </option>
+            }
+            {% endfor %}
+    </select>
+    <input type="submit" id="submit" value="Enter"></input>
+</form>
+<script type="text/javascript">
+</script>
+</body>
+</html>
